@@ -1,7 +1,7 @@
 .item-text {
     color: red;
     font-size: 20px;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     border: 2px solid white;
 }
 
