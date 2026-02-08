@@ -4,15 +4,30 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+ let [count,setCount] =useState(0);
+  function increment(){
+    count=count+1;
+    setCount(count);
 
+  }
+  function decrement(){
+    count=count-1;
+    setCount(count);
+  }
+  function reset(){
+    setCount(0);
+  }
   return (
+    
     <>
       <h1>Counter App</h1>
-      <p>Count: 0</p>
-      <button>INCREMENT</button>
-      <button>DECREMENT</button>
-      <button>RESET</button>
+      <p>Count: {count}</p>
+      <div className='btn'>
+        <button onClick={increment}>➕ INCREMENT</button>
+        <button onClick={decrement}>➖ DECREMENT</button>
+        <button onClick={reset}>✖️ RESET</button>
+        </div>
     </>
   )
 }
