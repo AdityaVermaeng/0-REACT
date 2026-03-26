@@ -26,7 +26,7 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("username is ", username);
-    changeUsername("");//after submitting the form, we want to clear the input field, so we set the username state to an empty string
+    changeUsername("");//after submitting the form, we want to clear the input field, so we set the username state to an empty string 
 
     // alert("Form Submitted");
     }
