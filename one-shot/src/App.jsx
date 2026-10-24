@@ -93,27 +93,55 @@
 // }
 
 // export default App
-import React from 'react'
-import { Route,Routes } from 'react-router-dom'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
-import Product from './pages/Product.jsx'
-import Header from './components/Header.jsx'
+// import React from 'react'
+// import { Route,Routes } from 'react-router-dom'
+// import Home from './pages/Home.jsx'
+// import About from './pages/About.jsx'
+// import Contact from './pages/Contact.jsx'
+// import Product from './pages/Product.jsx'
+// import Header from './components/Header.jsx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <Routes>
+//         <Route path='/about' element={<About />} />
+//         <Route path='/contact' element={<Contact />} />
+//         <Route path='/product' element={<Product />} />
+//         <Route path='/home' element={<Home />} />
+
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+///----------------Context API------------------//
+
+
+import React,{useContext} from 'react'
+import Header2 from './components/Header2'
+import Section from './components/Section'
+import Footer from './components/Footer'
+import UserContext,{DataContext} from "./context/UserContext.jsx";
 
 const App = () => {
+  const data= useContext(DataContext);
+
+
   return (
     <div>
-      <Header />
-      <Routes>
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/product' element={<Product />} />
-        <Route path='/home' element={<Home />} />
-
-
-      </Routes>
+      <h1>Welcome to the App</h1>
+       <Header2 />
+       <Section />
+       <Footer />
     </div>
+
   )
 }
 
